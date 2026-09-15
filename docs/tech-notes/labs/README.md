@@ -17,6 +17,7 @@
 | [constrained-output](constrained-output/) | 09 结构化输出 | numpy |
 | [eval-stats](eval-stats/) | 10 评测方法 | numpy |
 | [image-tokens](image-tokens/) | 12 图片的代价 | 无（标准库） |
+| [untrusted-content](untrusted-content/) | 13 外部内容与提示注入 | 无（标准库） |
 
 作者的运行环境：macOS（Apple Silicon）、Python 3.13、PostgreSQL 14。
 
