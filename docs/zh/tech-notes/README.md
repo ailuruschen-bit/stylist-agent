@@ -13,5 +13,7 @@
 | [03 用 PostgreSQL 做任务队列：行锁、SKIP LOCKED 与 LISTEN/NOTIFY](03-postgresql-task-queue.md) | 关系数据库怎样当可靠的任务队列用 | 两个 Worker 抢任务、崩溃恢复、通知投递 |
 | [04 拆解 Agent 接入：模型怎样调用我们的代码](04-agent-tool-loop.md) | “Agent 调用工具”到底发生了什么 | 按 API 格式逐步推演 |
 | [05 模型 SDK 与 Agent 框架：Anthropic SDK、Google Gen AI SDK / ADK、Spring AI、LangGraph](05-sdks-and-agent-frameworks.md) | 这些名字分别处在哪一层，有什么不同 | 同一个工具循环的四种写法 |
+| [06 相似单品怎么找：向量、余弦相似度与近似检索](06-vector-search.md) | “像不像”怎样变成可以计算和排序的量 | 精确检索与近似检索的召回率、耗时对比 |
+| [07 上下文与提示缓存：一次对话到底发了多少东西](07-context-and-prompt-caching.md) | 重发上下文的代价有多大，缓存怎样避免重复付费 | 十轮对话的上下文增长与成本估算 |
 
-建议阅读顺序：先读 04，再读 05；01、02、03 相互独立，可以按兴趣阅读。
+建议阅读顺序：先读 04，再读 05 和 07；01、02、03、06 相互独立，可以按兴趣阅读。

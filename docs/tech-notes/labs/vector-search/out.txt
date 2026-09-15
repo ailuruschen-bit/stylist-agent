@@ -1,0 +1,20 @@
+20000 garments, 64 dimensions, 50 queries, top-10
+
+[1] cosine similarity vs Euclidean distance (unit vectors)
+  same top-10 set: True
+  relation check: max |L2^2 - (2 - 2*cos)| = 1.33e-15
+
+[2] exact search: 0.5 ms per query, scans 20000 vectors
+
+[3] IVF-style index: 64 clusters, average 312 vectors per cluster
+  probes  recall@10  scanned  ms/query
+       1     16.80%      307       0.1
+       2     26.40%      609       0.1
+       4     39.00%     1199       0.2
+       8     57.40%     2489       0.4
+      16     75.40%     5006       0.8
+      32     93.20%    10112       1.6
+
+[4] filtering by category 'outerwear' (3925 of 20000 garments)
+  filter after search: on average 2.2 of 10 results survive the filter
+  filter before search: always 10 results, scans only matching vectors
