@@ -1,0 +1,42 @@
+[1] check the rule against the sizes listed in the documentation
+  input         tier      docs size    ours          docs tok   ours  ok
+  200x200       standard  200x200      200x200             64     64  yes
+  200x200       high-res  200x200      200x200             64     64  yes
+  1000x1000     standard  1000x1000    1000x1000         1296   1296  yes
+  1000x1000     high-res  1000x1000    1000x1000         1296   1296  yes
+  1092x1092     standard  1092x1092    1092x1092         1521   1521  yes
+  1092x1092     high-res  1092x1092    1092x1092         1521   1521  yes
+  1920x1080     standard  1456x819     1447x814          1560   1560  no ((1447, 814), 1560)
+  1920x1080     high-res  1920x1080    1920x1080         2691   2691  yes
+  2000x1500     standard  1269x952     1270x952          1564   1564  yes
+  2000x1500     high-res  2000x1500    2000x1500         3888   3888  yes
+  3840x2160     standard  1456x819     1447x814          1560   1560  no ((1447, 814), 1560)
+  3840x2160     high-res  2576x1449    2576x1449         4784   4784  yes
+
+[2] photos StyleAI actually receives (high-resolution tier, claude-opus-5)
+  image                           input       sent as       tokens  $/1000 imgs
+  iPhone photo                    4032x3024   2193x1645       4661       23.30
+  Android photo                   4000x3000   2193x1645       4661       23.30
+  screenshot                      1290x2796   1188x2576       3956       19.78
+  resized upload, long edge 2048  2048x1536   2048x1536       4070       20.35
+  resized upload, long edge 1024  1024x768    1024x768        1036        5.18
+  garment cutout in this lab      480x560     480x560          360        1.80
+  rendered look 3:4 at 1K         768x1024    768x1024        1036        5.18
+
+[3] one render critique request: final image + truth images of each garment
+  2 garments:   3774 visual tokens (final 1036 + truth 2738) = $0.0189 per request
+  3 garments:   5143 visual tokens (final 1036 + truth 4107) = $0.0257 per request
+  5 garments:   7881 visual tokens (final 1036 + truth 6845) = $0.0394 per request
+
+[4] what pre-resizing saves for bulk tagging (claude-haiku-4-5)
+  long edge   size          tokens  $/1000 imgs
+  2048        1645x2193       4661        4.66
+  1536        1536x2048       4070        4.07
+  1024        1024x1365       1813        1.81
+  768         768x1024        1036        1.04
+  512         512x682          475        0.47
+
+[5] resending images every turn vs referencing them
+   1 turns, 3 images in history:    4107 visual tokens if resent each turn,   4107 if sent once
+   5 turns, 3 images in history:   20535 visual tokens if resent each turn,   4107 if sent once
+  10 turns, 3 images in history:   41070 visual tokens if resent each turn,   4107 if sent once
