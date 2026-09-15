@@ -1,0 +1,42 @@
+
+[1] connect from the beginning, then drop the connection after 2 events
+  [ 0.00s] server client connected, Last-Event-ID=none
+  [ 0.20s] server produced seq=1 message.delta
+  [ 0.30s] client received seq=1 message.delta {"text":"我先看看你衣橱里有哪些下装。"}
+  [ 0.60s] server produced seq=2 tool.started
+  [ 0.60s] client received seq=2 tool.started {"tool":"search_wardrobe"}
+  [ 0.60s] client disconnecting on purpose
+
+[2] reconnect WITHOUT Last-Event-ID (client had seen up to seq=2)
+  [ 1.00s] server produced seq=3 tool.finished
+  [ 1.21s] server client disconnected
+  [ 1.40s] server produced seq=4 render.stage
+  [ 1.51s] server client connected, Last-Event-ID=none
+  [ 1.51s] server replaying 4 event(s): seq [1, 2, 3, 4]
+  [ 1.51s] naive  received seq=1 message.delta {"text":"我先看看你衣橱里有哪些下装。"}
+  [ 1.51s] naive  received seq=2 tool.started {"tool":"search_wardrobe"}
+  [ 1.51s] naive  received seq=3 tool.finished {"tool":"search_wardrobe","count":4}
+  [ 1.51s] naive  received seq=4 render.stage {"renderId":"R-3391","stageNo":1}
+  [ 1.80s] server produced seq=5 render.stage
+  [ 1.81s] naive  received seq=5 render.stage {"renderId":"R-3391","stageNo":2}
+  [ 2.20s] server produced seq=6 done
+  [ 2.31s] naive  keep-alive comments ignored: 1
+
+[3] reconnect WITH Last-Event-ID: 2
+  [ 2.31s] server client connected, Last-Event-ID=2
+  [ 2.31s] server replaying 4 event(s): seq [3, 4, 5, 6]
+  [ 2.31s] client received seq=3 tool.finished {"tool":"search_wardrobe","count":4}
+  [ 2.31s] client received seq=4 render.stage {"renderId":"R-3391","stageNo":1}
+  [ 2.31s] client received seq=5 render.stage {"renderId":"R-3391","stageNo":2}
+  [ 2.31s] client received seq=6 done {"turnId":"T-77"}
+  [ 2.71s] server client disconnected
+  [ 3.81s] client keep-alive comments ignored: 4
+  [ 4.12s] server client disconnected
+
+[4] what the server stored
+  seq=1 message.delta
+  seq=2 tool.started
+  seq=3 tool.finished
+  seq=4 render.stage
+  seq=5 render.stage
+  seq=6 done
