@@ -18,7 +18,7 @@
 | 技术选型 | [02-tech-stack](docs/zh/02-tech-stack.md) | [02-tech-stack](docs/ja/02-tech-stack.md) | [02-tech-stack](docs/en/02-tech-stack.md) |
 | 开发规范 | [03-dev-guidelines](docs/zh/03-dev-guidelines.md) | [03-dev-guidelines](docs/ja/03-dev-guidelines.md) | [03-dev-guidelines](docs/en/03-dev-guidelines.md) |
 | 内容来源清单 | [04-content-sources](docs/zh/04-content-sources.md) | [04-content-sources](docs/ja/04-content-sources.md) | [04-content-sources](docs/en/04-content-sources.md) |
-| 系统架构 | [05-system-architecture](docs/zh/05-system-architecture.md) | 翻译中 | 翻译中 |
+| 系统架构 | [05-system-architecture](docs/zh/05-system-architecture.md) | [05-system-architecture](docs/ja/05-system-architecture.md) | [05-system-architecture](docs/en/05-system-architecture.md) |
 
 中文为源版本，日文与英文版本随后同步。立项文档另有可视化的三语版本 [docs/charter.html](docs/charter.html)，下载后用浏览器打开。
 

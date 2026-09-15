@@ -18,7 +18,7 @@ It understands color and layering, reads every garment you upload, and looks up 
 | Tech stack | [02-tech-stack](docs/zh/02-tech-stack.md) | [02-tech-stack](docs/ja/02-tech-stack.md) | [02-tech-stack](docs/en/02-tech-stack.md) |
 | Development guidelines | [03-dev-guidelines](docs/zh/03-dev-guidelines.md) | [03-dev-guidelines](docs/ja/03-dev-guidelines.md) | [03-dev-guidelines](docs/en/03-dev-guidelines.md) |
 | Content sources | [04-content-sources](docs/zh/04-content-sources.md) | [04-content-sources](docs/ja/04-content-sources.md) | [04-content-sources](docs/en/04-content-sources.md) |
-| System architecture | [05-system-architecture](docs/zh/05-system-architecture.md) | In translation | In translation |
+| System architecture | [05-system-architecture](docs/zh/05-system-architecture.md) | [05-system-architecture](docs/ja/05-system-architecture.md) | [05-system-architecture](docs/en/05-system-architecture.md) |
 
 The Chinese version is the source; Japanese and English versions follow. A visual, trilingual version of the charter is at [docs/charter.html](docs/charter.html). Download it and open it in a browser.
 
