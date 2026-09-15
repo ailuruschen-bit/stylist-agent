@@ -18,8 +18,11 @@ It understands color and layering, reads every garment you upload, and looks up 
 | Tech stack | [02-tech-stack](docs/zh/02-tech-stack.md) | [02-tech-stack](docs/ja/02-tech-stack.md) | [02-tech-stack](docs/en/02-tech-stack.md) |
 | Development guidelines | [03-dev-guidelines](docs/zh/03-dev-guidelines.md) | [03-dev-guidelines](docs/ja/03-dev-guidelines.md) | [03-dev-guidelines](docs/en/03-dev-guidelines.md) |
 | Content sources | [04-content-sources](docs/zh/04-content-sources.md) | [04-content-sources](docs/ja/04-content-sources.md) | [04-content-sources](docs/en/04-content-sources.md) |
+| System architecture | [05-system-architecture](docs/zh/05-system-architecture.md) | In translation | In translation |
 
-A visual, trilingual version of the charter is at [docs/charter.html](docs/charter.html). Download it and open it in a browser.
+The Chinese version is the source; Japanese and English versions follow. A visual, trilingual version of the charter is at [docs/charter.html](docs/charter.html). Download it and open it in a browser.
+
+Tech notes and their lab code (segmentation vs. image generation, color extraction, PostgreSQL task queues, agent integration, model SDKs and frameworks) live on the learning branch [`tech-notes`](https://github.com/ailuruschen-bit/stylist-agent/tree/tech-notes/docs/zh/tech-notes). They are not part of the product development docs.
 
 ## Key decisions
 

@@ -22,6 +22,7 @@
 ## 2. 分支与合并
 
 - `main` 为受保护分支，只能通过 PR 合入，使用 squash merge。
+- `tech-notes` 是长期存在的学习分支，存放技术原理文章和实验代码，与正式开发无关，**不合并回 `main`**。需要引用正式文档的最新内容时，从 `main` 合并到 `tech-notes`。
 - 分支命名：`<type>/<short-description>`，例如 `feat/closet-upload`、`fix/sse-reconnect`。
   - 类型：`feat`、`fix`、`docs`、`refactor`、`test`、`chore`、`exp`（实验分支，可以不合入）。
 - 一个 PR 只做一件事。建议变更不超过 400 行（不含生成文件、锁文件和迁移快照）。

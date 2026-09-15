@@ -18,8 +18,11 @@
 | 技术选型 | [02-tech-stack](docs/zh/02-tech-stack.md) | [02-tech-stack](docs/ja/02-tech-stack.md) | [02-tech-stack](docs/en/02-tech-stack.md) |
 | 开发规范 | [03-dev-guidelines](docs/zh/03-dev-guidelines.md) | [03-dev-guidelines](docs/ja/03-dev-guidelines.md) | [03-dev-guidelines](docs/en/03-dev-guidelines.md) |
 | 内容来源清单 | [04-content-sources](docs/zh/04-content-sources.md) | [04-content-sources](docs/ja/04-content-sources.md) | [04-content-sources](docs/en/04-content-sources.md) |
+| 系统架构 | [05-system-architecture](docs/zh/05-system-architecture.md) | 翻译中 | 翻译中 |
 
-立项文档另有可视化的三语版本 [docs/charter.html](docs/charter.html)，下载后用浏览器打开。
+中文为源版本，日文与英文版本随后同步。立项文档另有可视化的三语版本 [docs/charter.html](docs/charter.html)，下载后用浏览器打开。
+
+技术原理文章与实验代码（分割与生成模型、颜色提取、PostgreSQL 任务队列、Agent 接入、模型 SDK 与框架）放在学习分支 [`tech-notes`](https://github.com/ailuruschen-bit/stylist-agent/tree/tech-notes/docs/zh/tech-notes)，不属于正式开发内容。
 
 ## 关键决策
 
