@@ -8,7 +8,7 @@
 
 | 实验 | 对应文章 | 依赖 |
 | --- | --- | --- |
-| [latent-roundtrip](latent-roundtrip/) | 01 生成模型与分割模型 | torch、diffusers、pillow、numpy、scikit-image；首次运行会从 Hugging Face 下载约 330 MB 的 VAE 权重 |
+| [latent-roundtrip](latent-roundtrip/) | 01 生成模型与分割模型（`vae_roundtrip.py`）、11 多阶段一致性（`drift_lab.py`） | torch、diffusers、pillow、numpy、scikit-image；首次运行会从 Hugging Face 下载约 330 MB 的 VAE 权重 |
 | [garment-palette](garment-palette/) | 02 衣服的颜色怎样变成数据 | numpy、pillow、scikit-image |
 | [postgres-queue](postgres-queue/) | 03 用 PostgreSQL 做任务队列 | psycopg 3、一个可以随意读写的 PostgreSQL |
 | [vector-search](vector-search/) | 06 相似单品怎么找 | numpy |

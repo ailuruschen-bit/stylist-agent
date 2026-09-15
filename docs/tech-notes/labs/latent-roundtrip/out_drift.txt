@@ -1,0 +1,14 @@
+input 480x560, garment pixels 122027
+  mode      pass  meandiff   lowfreq   texture  mean       dE00
+  original     0      0.00      0.00      31.0  #8D8E92    0.00
+  chained      1     25.07      1.56      24.4  #8F8F93    0.61
+  chained      2     24.35      1.85      21.8  #8F9093    0.72
+  chained      3     24.22      2.18      20.6  #8F9094    0.87
+  chained      4     24.26      2.54      20.1  #8F8F95    1.23
+  chained      5     24.36      2.98      20.0  #8F8F96    1.84
+  chained      6     24.53      3.55      20.2  #8E8F98    2.59
+  anchored     1     25.07      1.56      24.4  #8F8F93    0.61
+  anchored     3     25.07      1.56      24.4  #8F8F93    0.61
+  anchored     6     25.07      1.56      24.4  #8F8F93    0.61
+
+saved drift_chained_pass*.png in /Users/apple/Claude_proj/styleai_v2/docs/tech-notes/labs/latent-roundtrip/out
