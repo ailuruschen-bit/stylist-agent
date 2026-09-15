@@ -1,0 +1,25 @@
+toy vocabulary of 22 tokens, 2000 samples per run
+
+[1] free sampling
+  valid against the schema :   0.3%
+  exactly the right values :   0.1%
+  invalid example          : ```json"category":"hoodie","hoodie""category"2}
+  invalid example          : {"grey":"tops"}"formality"524
+  invalid example          : {"category":"accessories",:}{2
+
+[2] constrained sampling (same generator, invalid tokens masked)
+  valid against the schema : 100.0%
+  exactly the right values :  51.7%
+
+[3] what masking does at one step (state 'value2': the formality number)
+  token            free  constrained
+  3              63.7%       78.3%
+  2              16.4%       20.1%
+  "shoes"         4.0%        0.0%  (blocked)
+  :               2.4%        0.0%  (blocked)
+  6               2.1%        0.0%  (blocked)
+  "outerwear"     1.7%        0.0%  (blocked)
+
+[4] where the errors go
+  free sampling      : 99.7% unusable output,  0.1% valid but wrong values
+  constrained        :  0.0% unusable output, 48.3% valid but wrong values

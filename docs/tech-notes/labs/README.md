@@ -14,6 +14,7 @@
 | [vector-search](vector-search/) | 06 相似单品怎么找 | numpy |
 | [context-cost](context-cost/) | 07 上下文与提示缓存 | 无（纯计算） |
 | [sse-stream](sse-stream/) | 08 事件流与断线补发 | 无（标准库，会在 127.0.0.1:8421 临时监听） |
+| [constrained-output](constrained-output/) | 09 结构化输出 | numpy |
 
 作者的运行环境：macOS（Apple Silicon）、Python 3.13、PostgreSQL 14。
 
