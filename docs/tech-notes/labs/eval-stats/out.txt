@@ -1,0 +1,40 @@
+simulated eval: v1 mean 3.9, v2 mean 4.1 (true difference +0.20)
+item spread SD 0.7, judge noise SD 0.45, 4000 simulated evals per row
+
+[1] one eval with 20 items, different items per version
+  run 1: observed difference +0.194  -> v2 looks better
+  run 2: observed difference +0.009  -> v2 looks better
+  run 3: observed difference -0.111  -> v1 looks better
+  run 4: observed difference +0.267  -> v2 looks better
+  run 5: observed difference +0.563  -> v2 looks better
+
+[2] how often the eval points at the better version
+   items   unpaired    paired
+      10     70.4%     83.5%
+      20     77.5%     91.9%
+      50     87.8%     98.0%
+     100     95.2%     99.9%
+     200     99.0%    100.0%
+     500    100.0%    100.0%
+
+[3] requiring a visible margin (observed difference > 0.05)
+   items   unpaired    paired
+      20     70.5%     84.1%
+      50     80.7%     93.5%
+     100     87.9%     98.2%
+     200     95.2%     99.9%
+     500     99.5%    100.0%
+
+[4] bootstrap 95% confidence interval of the paired difference (one eval each)
+  n=  20  mean -0.033  CI [-0.313, +0.259]  width 0.572  includes 0
+  n=  50  mean +0.135  CI [-0.023, +0.300]  width 0.323  includes 0
+  n= 100  mean +0.204  CI [+0.091, +0.317]  width 0.226  excludes 0
+  n= 200  mean +0.182  CI [+0.095, +0.268]  width 0.174  excludes 0
+  n= 500  mean +0.189  CI [+0.130, +0.244]  width 0.114  excludes 0
+
+[5] averaging two judges instead of one (paired design)
+   items   1 judge   2 judges
+      20     91.9%     97.2%
+      50     98.0%     99.9%
+     100     99.9%    100.0%
+     200    100.0%    100.0%
