@@ -1,0 +1,17 @@
+# 技术原理
+
+> 语言：**中文** · 日本語（翻译中） · English（翻译中）
+
+《技术选型》和《系统架构》说明了 StyleAI **用什么**、**怎么组合**。这个目录里的文章回答另一个问题：这些技术**为什么这样工作**，以及它们为什么适合或不适合 StyleAI。
+
+每篇文章围绕一个问题展开，只解释回答这个问题所需的概念。能动手验证的地方都配有实验，文中的输出来自实际运行，实验代码和运行方法见 [labs](../../tech-notes/labs/)。
+
+| 文章 | 回答的问题 | 实验 |
+| --- | --- | --- |
+| [01 拆解“抠图”：生成模型与分割模型为什么给出不同的结果](01-generation-vs-segmentation.md) | 为什么衣橱入库不用生图模型抠图 | 潜空间往返对像素的影响 |
+| [02 衣服的颜色怎样变成数据](02-garment-color-extraction.md) | 一件衣服的“主色、辅色、点缀色”怎样从像素里算出来 | 麻灰卫衣的颜色提取 |
+| [03 用 PostgreSQL 做任务队列：行锁、SKIP LOCKED 与 LISTEN/NOTIFY](03-postgresql-task-queue.md) | 关系数据库怎样当可靠的任务队列用 | 两个 Worker 抢任务、崩溃恢复、通知投递 |
+| [04 拆解 Agent 接入：模型怎样调用我们的代码](04-agent-tool-loop.md) | “Agent 调用工具”到底发生了什么 | 按 API 格式逐步推演 |
+| [05 模型 SDK 与 Agent 框架：Anthropic SDK、Google Gen AI SDK / ADK、Spring AI、LangGraph](05-sdks-and-agent-frameworks.md) | 这些名字分别处在哪一层，有什么不同 | 同一个工具循环的四种写法 |
+
+建议阅读顺序：先读 04，再读 05；01、02、03 相互独立，可以按兴趣阅读。
