@@ -1,6 +1,6 @@
 # 拆解“抠图”：生成模型与分割模型为什么给出不同的结果
 
-> 语言：**中文** · 日本語（翻译中） · English（翻译中）
+> 语言：中文（摸索阶段只维护中文版）
 > 所属：[技术原理](README.md) · 更新：2026-09-16 · 实验代码：[labs/latent-roundtrip](../../tech-notes/labs/latent-roundtrip/)
 
 Hackathon demo 里有一个 `garment_extract` 任务：用户上传一张衣服照片，后端把照片交给 Gemini 的生图模型，让它“去掉背景，只保留衣服，放在白底上”。返回的图片看起来很干净，演示效果也不错。

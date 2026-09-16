@@ -1,6 +1,6 @@
 # 多阶段生图的一致性：参考图、漂移与锚点
 
-> 语言：**中文** · 日本語（翻译中） · English（翻译中）
+> 语言：中文（摸索阶段只维护中文版）
 > 所属：[技术原理](README.md) · 更新：2026-09-16 · 前置阅读：[01 拆解“抠图”](01-generation-vs-segmentation.md) · 实验代码：[labs/latent-roundtrip](../../tech-notes/labs/latent-roundtrip/)
 
 StyleAI 的复杂方案分阶段生成：

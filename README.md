@@ -1,36 +1,48 @@
-# stylist-agent
+# stylist-agent · tech-notes
 
-> **中文** · [日本語](README.ja.md) · [English](README.en.md)
+**这是学习分支。** 存放 StyleAI v2 相关技术的原理讲解与可运行实验，和正式开发无关，不会合并回 `main`。
 
-**StyleAI v2**（工作名）：一位和你共用衣橱的 AI 穿搭博主。
+- 立项阶段的文档在 [`draft`](https://github.com/ailuruschen-bit/stylist-agent/tree/draft/docs)
+- 仓库说明在 [`main`](https://github.com/ailuruschen-bit/stylist-agent)
 
-它懂色彩与层次，读得懂你上传的每件衣服，会去品牌官网找单品，自己写提示词、自己决定怎么分阶段生成穿搭效果图，并通过阅读时尚杂志不断学到新技巧。
+## 文章
 
-## 当前状态
+每篇围绕一个问题，只解释回答它所需的概念；文中引用的输出都来自实验的实际运行。
 
-**规划阶段**：还没有应用代码。目前在完善立项、技术选型与开发规范文档，确认后进入 M0 开发。
+| 文章 | 回答的问题 |
+| --- | --- |
+| [01 拆解“抠图”](docs/zh/tech-notes/01-generation-vs-segmentation.md) | 为什么衣橱入库不用生图模型抠图 |
+| [02 衣服的颜色怎样变成数据](docs/zh/tech-notes/02-garment-color-extraction.md) | 主色、点缀色怎样从像素里算出来 |
+| [03 用 PostgreSQL 做任务队列](docs/zh/tech-notes/03-postgresql-task-queue.md) | 关系数据库怎样当可靠的任务队列 |
+| [04 拆解 Agent 接入](docs/zh/tech-notes/04-agent-tool-loop.md) | “Agent 调用工具”到底发生了什么 |
+| [05 模型 SDK 与 Agent 框架](docs/zh/tech-notes/05-sdks-and-agent-frameworks.md) | Anthropic SDK、Google ADK、Spring AI、LangGraph 分别在哪一层 |
+| [06 相似单品怎么找](docs/zh/tech-notes/06-vector-search.md) | “像不像”怎样变成可计算、可排序的量 |
+| [07 上下文与提示缓存](docs/zh/tech-notes/07-context-and-prompt-caching.md) | 重发上下文的代价，缓存怎样避免重复付费 |
+| [08 事件流](docs/zh/tech-notes/08-sse-event-stream.md) | 断线之后怎样不丢事件 |
+| [09 结构化输出](docs/zh/tech-notes/09-structured-output.md) | 约束解码保证了什么，没保证什么 |
+| [10 评测](docs/zh/tech-notes/10-evaluation.md) | 多少样本才足以支撑“这次更好”的结论 |
+| [11 多阶段生图的一致性](docs/zh/tech-notes/11-multi-stage-consistency.md) | 一个阶段接一个阶段地编辑，误差会累积吗 |
+| [12 图片的代价](docs/zh/tech-notes/12-image-tokens.md) | 一张照片值多少 token，应该缩到多大 |
+| [13 外部内容是数据，不是指令](docs/zh/tech-notes/13-untrusted-content.md) | 读别人写的网页，风险在哪里，怎么限定后果 |
 
-## 文档
+索引与阅读顺序见 [docs/zh/tech-notes/README.md](docs/zh/tech-notes/README.md)。
 
-| 文档 | 中文 | 日本語 | English |
-|---|---|---|---|
-| 立项文档 | [01-project-charter](docs/zh/01-project-charter.md) | [01-project-charter](docs/ja/01-project-charter.md) | [01-project-charter](docs/en/01-project-charter.md) |
-| 技术选型 | [02-tech-stack](docs/zh/02-tech-stack.md) | [02-tech-stack](docs/ja/02-tech-stack.md) | [02-tech-stack](docs/en/02-tech-stack.md) |
-| 开发规范 | [03-dev-guidelines](docs/zh/03-dev-guidelines.md) | [03-dev-guidelines](docs/ja/03-dev-guidelines.md) | [03-dev-guidelines](docs/en/03-dev-guidelines.md) |
-| 内容来源清单 | [04-content-sources](docs/zh/04-content-sources.md) | [04-content-sources](docs/ja/04-content-sources.md) | [04-content-sources](docs/en/04-content-sources.md) |
-| 系统架构 | [05-system-architecture](docs/zh/05-system-architecture.md) | [05-system-architecture](docs/ja/05-system-architecture.md) | [05-system-architecture](docs/en/05-system-architecture.md) |
+## 实验
 
-中文为源版本，日文与英文版本随后同步。立项文档另有可视化的三语版本 [docs/charter.html](docs/charter.html)，下载后用浏览器打开。
+实验代码在 [docs/tech-notes/labs](docs/tech-notes/labs)，不依赖应用代码，也不需要任何 API 密钥。运行方式见该目录的说明。
 
-技术原理文章与实验代码（分割与生成模型、颜色提取、PostgreSQL 任务队列、Agent 接入、模型 SDK 与框架）放在学习分支 [`tech-notes`](https://github.com/ailuruschen-bit/stylist-agent/tree/tech-notes/docs/zh/tech-notes)，不属于正式开发内容。
-
-## 关键决策
-
-- 平台：Web
-- 首发市场：日本，受众为 18–30 岁年轻人
-- 首批品牌：UNIQLO、ZARA、H&M、NIKE、adidas
-- 技术栈：Next.js + FastAPI + PostgreSQL（pgvector）；Agent 使用 Claude Opus 5；生图使用 Gemini
-- 基于 [HackathonPJT](https://github.com/ailuruschen-bit/HackathonPJT/tree/deploy/lite-budget) 的 demo 重新构建
+| 实验 | 对应文章 |
+| --- | --- |
+| [latent-roundtrip](docs/tech-notes/labs/latent-roundtrip) | 01、11 |
+| [garment-palette](docs/tech-notes/labs/garment-palette) | 02 |
+| [postgres-queue](docs/tech-notes/labs/postgres-queue) | 03 |
+| [vector-search](docs/tech-notes/labs/vector-search) | 06 |
+| [context-cost](docs/tech-notes/labs/context-cost) | 07 |
+| [sse-stream](docs/tech-notes/labs/sse-stream) | 08 |
+| [constrained-output](docs/tech-notes/labs/constrained-output) | 09 |
+| [eval-stats](docs/tech-notes/labs/eval-stats) | 10 |
+| [image-tokens](docs/tech-notes/labs/image-tokens) | 12 |
+| [untrusted-content](docs/tech-notes/labs/untrusted-content) | 13 |
 
 ## 许可
 

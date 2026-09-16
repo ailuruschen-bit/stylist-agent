@@ -1,6 +1,6 @@
 # 相似单品怎么找：向量、余弦相似度与近似检索
 
-> 语言：**中文** · 日本語（翻译中） · English（翻译中）
+> 语言：中文（摸索阶段只维护中文版）
 > 所属：[技术原理](README.md) · 更新：2026-09-16 · 实验代码：[labs/vector-search](../../tech-notes/labs/vector-search/)
 
 StyleAI 里有几个问题，用 SQL 不太好写：

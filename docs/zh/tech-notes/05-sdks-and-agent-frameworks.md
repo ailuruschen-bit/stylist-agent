@@ -1,6 +1,6 @@
 # 模型 SDK 与 Agent 框架：Anthropic SDK、Google Gen AI SDK / ADK、Spring AI、LangGraph
 
-> 语言：**中文** · 日本語（翻译中） · English（翻译中）
+> 语言：中文（摸索阶段只维护中文版）
 > 所属：[技术原理](README.md) · 更新：2026-09-16 · 前置阅读：[04 拆解 Agent 接入](04-agent-tool-loop.md)
 
 讨论技术选型时，这些名字经常被放在一起比较：Anthropic SDK、Google Gen AI SDK、Google ADK、Spring AI、LangChain、LangGraph。它们都和“调用大模型、构建 Agent”有关，但并不是同一类东西。把 Spring AI 和 Anthropic SDK 放在同一张对比表里，就像把 Spring Data 和 JDBC 驱动放在一起比较：两者都能读写数据库，却处在不同的层级。

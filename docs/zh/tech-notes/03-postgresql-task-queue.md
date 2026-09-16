@@ -1,6 +1,6 @@
 # 用 PostgreSQL 做任务队列：行锁、SKIP LOCKED 与 LISTEN/NOTIFY
 
-> 语言：**中文** · 日本語（翻译中） · English（翻译中）
+> 语言：中文（摸索阶段只维护中文版）
 > 所属：[技术原理](README.md) · 更新：2026-09-16 · 实验代码：[labs/postgres-queue](../../tech-notes/labs/postgres-queue/)
 
 用户上传一件衣服，后台要抠图、算颜色、调用模型打标，前后十几秒；生成一张多阶段效果图，要四十秒到两分钟。这些工作都不能放在 HTTP 请求里同步做完：请求会超时，用户也不该一直等着。

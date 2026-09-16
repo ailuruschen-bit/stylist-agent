@@ -1,6 +1,6 @@
 # 结构化输出：怎样保证模型返回的一定是合法 JSON
 
-> 语言：**中文** · 日本語（翻译中） · English（翻译中）
+> 语言：中文（摸索阶段只维护中文版）
 > 所属：[技术原理](README.md) · 更新：2026-09-16 · 实验代码：[labs/constrained-output](../../tech-notes/labs/constrained-output/)
 
 StyleAI 有四个地方需要模型返回**机器能直接用**的结果：

@@ -1,6 +1,6 @@
 # 衣服的颜色怎样变成数据
 
-> 语言：**中文** · 日本語（翻译中） · English（翻译中）
+> 语言：中文（摸索阶段只维护中文版）
 > 所属：[技术原理](README.md) · 更新：2026-09-16 · 实验代码：[labs/garment-palette](../../tech-notes/labs/garment-palette/)
 
 StyleAI 给每件入库的衣服打一张标签，其中颜色一栏是这样的：

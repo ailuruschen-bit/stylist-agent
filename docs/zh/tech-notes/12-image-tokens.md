@@ -1,6 +1,6 @@
 # 图片的代价：视觉 token、尺寸与传输方式
 
-> 语言：**中文** · 日本語（翻译中） · English（翻译中）
+> 语言：中文（摸索阶段只维护中文版）
 > 所属：[技术原理](README.md) · 更新：2026-09-16 · 实验代码：[labs/image-tokens](../../tech-notes/labs/image-tokens/)
 
 StyleAI 是一个到处都在传图片的系统：
@@ -124,7 +124,7 @@ tokens = ⌈宽 / 28⌉ × ⌈高 / 28⌉
   5 garments:   7881 visual tokens (final 1036 + truth 6845) = $0.0394 per request
 ```
 
-一次检查约两到四美分，其中绝大部分是图片。这是[《系统架构》](../05-system-architecture.md)里“每个生图任务最多 8 次图像调用”这条预算之外，必须一并计入的成本。
+一次检查约两到四美分，其中绝大部分是图片。这是[《系统架构》](https://github.com/ailuruschen-bit/stylist-agent/blob/draft/docs/zh/05-system-architecture.md)里“每个生图任务最多 8 次图像调用”这条预算之外，必须一并计入的成本。
 
 ## 上传时缩一下，能省多少
 
