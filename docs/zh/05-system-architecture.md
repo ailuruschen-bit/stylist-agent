@@ -1,6 +1,6 @@
 # 系统架构
 
-> 语言：**中文** · 日本語（翻译中） · English（翻译中）
+> 语言：中文（摸索阶段只维护中文版；日文、英文旧稿见 [docs/archive](../archive/)，正式开发开始时重新翻译）
 > 状态：草案 v0.1 · 更新：2026-09-16
 > 本文描述 StyleAI v2 首个版本的系统结构：由哪些部分组成、各部分如何协作、数据怎样流动，以及出错时怎样处理。技术选型的理由见[《技术选型》](02-tech-stack.md)；其中涉及的技术原理，见 `tech-notes` 分支的[技术原理](https://github.com/ailuruschen-bit/stylist-agent/tree/tech-notes/docs/zh/tech-notes)系列文章。
 

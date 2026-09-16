@@ -1,6 +1,6 @@
 # 技术选型
 
-> 语言：**中文** · 日本語（翻译中） · English（翻译中）
+> 语言：中文（摸索阶段只维护中文版；日文、英文旧稿见 [docs/archive](../archive/)，正式开发开始时重新翻译）
 > 状态：草案 v0.2 · 更新：2026-09-16
 > 本文记录 StyleAI v2 的技术选型结论和理由。标注“待验证”的项，会在对应里程碑用原型确认后再定稿。各项技术的工作原理，见 `tech-notes` 分支的[技术原理](https://github.com/ailuruschen-bit/stylist-agent/tree/tech-notes/docs/zh/tech-notes)系列文章；系统如何组合这些技术，见[《系统架构》](05-system-architecture.md)。
 > 文中的模型 ID 与库版本核对于 2026 年 9 月。
