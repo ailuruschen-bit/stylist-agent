@@ -23,7 +23,16 @@
 
 ## 2. 分支与合并
 
+当前有三条长期分支：
+
+| 分支 | 内容 | 是否合回 `main` |
+| --- | --- | --- |
+| `main` | 保持干净。立项阶段只放仓库说明，正式开发开始后才放代码与定稿文档 | — |
+| `draft` | 立项阶段的探索文档（立项、技术选型、开发规范、内容来源、系统架构，中日英三语） | 内容定稿后再整理合入 |
+| `tech-notes` | 学习用的技术原理文章与实验代码 | 不合入 |
+
 - `main` 为受保护分支，只能通过 PR 合入，使用 squash merge。M0 开始时在 GitHub 上开启：必须通过 CI、至少一人批准、保持线性历史、禁止强制推送。
+- `draft` 上的文档仍在讨论中，可以直接提交，不要求 PR；结论稳定后再整理成正式文档合入 `main`。
 - `tech-notes` 是长期存在的学习分支，存放技术原理文章和实验代码，与正式开发无关，**不合并回 `main`**。需要引用正式文档的最新内容时，从 `main` 合并到 `tech-notes`。
 - 功能分支命名：`<type>/<short-description>`，例如 `feat/closet-upload`、`fix/sse-reconnect`。
   - 类型：`feat`、`fix`、`docs`、`refactor`、`test`、`chore`、`exp`（实验分支，可以不合入）。
@@ -504,8 +513,8 @@ confidence: 0.72
 
 | 目录 | 内容 | 分支 |
 | --- | --- | --- |
-| `docs/zh`、`docs/ja`、`docs/en` | 立项、技术选型、开发规范、内容来源、系统架构 | `main` |
-| `docs/charter.html` | 立项文档的可视化版本 | `main` |
+| `docs/zh`、`docs/ja`、`docs/en` | 立项、技术选型、开发规范、内容来源、系统架构 | `draft` |
+| `docs/charter.html` | 立项文档的可视化版本 | `draft` |
 | `docs/zh/tech-notes`、`docs/tech-notes/labs` | 技术原理文章与实验代码 | `tech-notes` |
 
 - 文档中的决定发生变化时，更新文档本身并修改顶部的版本号与日期，不在文档末尾追加“变更记录”。
