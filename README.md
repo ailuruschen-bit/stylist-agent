@@ -18,6 +18,7 @@
 | [03 开发规范](docs/zh/03-dev-guidelines.md) | 分支与提交、代码规范、API 与事件约定、Agent 与提示词规范、测试与安全 |
 | [04 内容来源清单](docs/zh/04-content-sources.md) | 品牌与杂志来源、数据字段映射、使用规则 |
 | [05 系统架构](docs/zh/05-system-architecture.md) | 上下文、容器、模块、核心流程、数据模型、可观测性、失败处理 |
+| [06 产品形态与交互流程](docs/zh/06-product-experience.md) | 三个模块的分工、衣橱录入方式、对话交互、生图规格、色卡变装与随机搭配玩法 |
 
 立项文档另有可视化版本 [docs/charter.html](docs/charter.html)，下载后用浏览器打开（内容为较早的快照）。
 
